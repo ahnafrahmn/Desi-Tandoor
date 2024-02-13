@@ -1,0 +1,134 @@
+<div class="burger-btn">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+<div class="burger-menu">
+  <div class="X">X</div>
+  <a href="#entree"><div class="item">ENTREE</div></a>
+  <a href="#desi-chatore"><div class="item">DESI CHATORE</div></a>
+  <a href="#mains-veg"><div class="item">MAINS - VEGETARIAN</div></a>
+  <a href="#mains-lamb"><div class="item">MAINS - LAMB</div></a>
+  <a href="#mains-beef"><div class="item">MAINS - BEEF</div></a>
+  <a href="#mains-chicken"><div class="item">MAINS - CHICKEN</div></a>
+  <a href="#mains-seafood"><div class="item">MAINS - SEAFOOD</div></a>
+  <a href="#mains-indo-chinese"><div class="item">MAINS - INDO CHINESE</div></a>
+  <a href="#tandoori-breads"><div class="item">TANDOORI BREADS</div></a>
+  <a href="#from-the-paddy"><div class="item">FROM THE PADDY</div></a>
+  <a href="#accomp"><div class="item">ACCOMPANIMENTS</div></a>
+  <a href="#desserts"><div class="item">DESSERTS</div></a>
+  <a href="#beverages"><div class="item">BEVERAGES</div></a>
+  <a href="#contacts"><div class="item">CONTACT US</div></a>
+</div>
+
+<!-- 
+    >>>>>>>>>>>>>>      MUST ADD FOLLOWING CSS CODE:
+
+
+.burger-btn,
+.burger-menu-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.burger-btn {
+  flex-direction: column;
+  width: 7vw;
+  height: 5vw;
+  top: 5vw;
+  right: 5vw;
+  position: fixed;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.bar {
+  height: 15%;
+  width: 100%;
+  background-color: white;
+  border: 0 transparent;
+  border-radius: 20px;
+}
+.burger-menu {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.burger-menu-show {
+  flex-direction: column;
+  position: fixed;
+  padding: 5px;
+  top: 1vw;
+  right: 1vw;
+  width: 25vw;
+  height: auto;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 20px;
+  animation: enlarge 0.5s both;
+}
+@keyframes enlarge {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 25vw;
+    height: auto;
+  }
+}
+
+.burger-menu-show > .item {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1.5vw;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  animation: show 0.6s both;
+}
+@keyframes show {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 1.5vw;
+  }
+}
+.burger-menu-show > .item:hover {
+  background-color: aqua;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.burger-menu-show > .X {
+  background: transparent;
+  font-size: 3vw;
+  cursor: pointer;
+}
+.burger-menu-show > .X:hover {
+  background-color: aqua;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+
+    >>>>>>>>>>>>>>      MUST ADD FOLLOWING JS CODE:
+
+
+    fetch("burgerMenu.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.querySelector(".burgerMenu").innerHTML = data;
+    const burgerMenu = document.querySelector(".burger-menu");
+    const crossBtn = document.querySelector(".burger-menu > .X");
+    document.querySelector('.burger-btn').addEventListener("click", ()=> {
+      burgerMenu.classList.add("burger-menu-show");
+      crossBtn.addEventListener("click", () => {
+        burgerMenu.classList.remove("burger-menu-show");
+      });
+    })
+  });
+
+
+ -->

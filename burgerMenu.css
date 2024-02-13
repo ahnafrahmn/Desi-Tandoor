@@ -1,0 +1,135 @@
+
+
+
+/* =================================> burger button <============================ */
+
+
+
+.burger-btn,
+.burger-menu-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.burger-btn {
+  flex-direction: column;
+  width: 5vw;
+  height: 4vw;
+  top: 5vw;
+  right: 5vw;
+  position: fixed;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.bar {
+  height: 15%;
+  width: 100%;
+  background-color: white;
+  border: 0 transparent;
+  border-radius: 20px;
+}
+.burger-menu {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.burger-menu > a {
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+}
+.burger-menu-show {
+  flex-direction: column;
+  position: fixed;
+  padding: 5px;
+  top: 1vw;
+  right: 1vw;
+  width: 25vw;
+  height: auto;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 20px;
+  animation: enlarge 0.5s both;
+}
+@keyframes enlarge {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 25vw;
+    height: auto;
+  }
+}
+
+.burger-menu-show > a > .item {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1vw;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  animation: show 0.6s both;
+}
+@keyframes show {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 1vw;
+  }
+}
+.burger-menu-show > a > .item:hover {
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.burger-menu-show > .X {
+  background: transparent;
+  margin: 1vw;
+  font-size: 4vw;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.burger-menu-show > .X:hover {
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+
+/* ====================================================================================== */
+
+
+@media (max-width: 800px) {
+  .burger-menu-show {
+    animation: enlarge 0.5s both;
+  }
+  @keyframes enlarge {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    100% {
+      width: 45vw;
+      height: auto;
+    }
+  }
+  
+  .burger-menu-show > a > .item {
+    font-size: 2.5vw;
+    animation: show 0.6s both;
+  }
+  @keyframes show {
+    0% {
+      font-size: 0;
+    }
+    100% {
+      font-size: 2.5vw;
+    }
+  }
+}
