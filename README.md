@@ -3,4 +3,3 @@ This project website is created for "Desi Tandoor Indian Restaurant". They are o
 
 **Live-link:**
 **https://ahnafrahmn.github.io/Desi-Tandoor/**
-[QR.pdf](https://github.com/ahnafrahmn/Desi-Tandoor/files/14266736/QR.pdf)
